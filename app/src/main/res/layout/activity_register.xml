@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="173dp"
-        android:layout_height="154dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginTop="32dp"
         android:src="@drawable/sepatu"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="TanggalLahir"
+            android:hint="Tanggal Lahir"
             app:errorEnabled="true"
             app:startIconDrawable="@drawable/ic_tanggal_lahir_24">
 
@@ -111,7 +111,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="NoTelepon"
+            android:hint="No Telepon"
             app:errorEnabled="true"
             app:startIconDrawable="@drawable/ic_phone_24">
 

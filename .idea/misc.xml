@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Kuliah LER/Semester 5/Pemrograman Berbasis Platform (C) - TA/Android Studio/Toko/app/src/main/res/layout/activity_main.xml" value="0.2115036231884058" />
+        <entry key="..\:/Kuliah LER/Semester 5/Pemrograman Berbasis Platform (C) - TA/Android Studio/Toko/app/src/main/res/drawable/ic_home_24.xml" value="0.24" />
+        <entry key="..\:/Kuliah LER/Semester 5/Pemrograman Berbasis Platform (C) - TA/Android Studio/Toko/app/src/main/res/drawable/ic_user_24.xml" value="0.2155" />
+        <entry key="..\:/Kuliah LER/Semester 5/Pemrograman Berbasis Platform (C) - TA/Android Studio/Toko/app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/Kuliah LER/Semester 5/Pemrograman Berbasis Platform (C) - TA/Android Studio/Toko/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Kuliah LER/Semester 5/Pemrograman Berbasis Platform (C) - TA/Android Studio/Toko/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/Kuliah LER/Semester 5/Pemrograman Berbasis Platform (C) - TA/Android Studio/Toko/app/src/main/res/menu/home_menu.xml" value="0.22" />
       </map>

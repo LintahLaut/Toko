@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/menu_pelayan"
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_24"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/menu_pelayan"
+        android:icon="@drawable/ic_person_add_24"
         android:title="Pelayan"/>
 
-    <item android:id="@+id/menu_barang"
+    <item
+        android:id="@+id/menu_barang"
+        android:icon="@drawable/ic_shopping_cart_24"
         android:title="Barang"/>
 
-    <item android:id="@+id/menu_exit"
-        android:title="Exit App"/>
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_user_24"
+        android:title="Profile" />
+
 </menu>
