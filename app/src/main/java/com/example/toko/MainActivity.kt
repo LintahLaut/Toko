@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Ubah Title pada App Bar Aplikasi
-        setTitle("User Login")
+        setTitle("USER LOGIN")
 
         // Hubungkan variabel dengan view di layoutnya.
         inputUsername = findViewById(R.id.inputLayoutUsername)

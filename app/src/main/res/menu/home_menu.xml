@@ -7,9 +7,9 @@
         android:title="Home" />
 
     <item
-        android:id="@+id/menu_pelayan"
+        android:id="@+id/menu_pegawai"
         android:icon="@drawable/ic_person_add_24"
-        android:title="Pelayan"/>
+        android:title="Pegawai"/>
 
     <item
         android:id="@+id/menu_barang"
