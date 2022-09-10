@@ -44,11 +44,20 @@ class MainActivity : AppCompatActivity() {
             if (username.isEmpty()) {
                 inputUsername.setError("Username must be filled with Text")
                 checkLogin = false
+            }else if (username != "admin") {
+                inputUsername.setError("Username false")
+                checkLogin = false
+            }else if (username == "admin") {
+                inputUsername.setTextColor(Color.parseColor("#FFFFFF"))
+                checkLogin = false
             }
 
             // Pengecekan apakah input password kosong
             if (password.isEmpty()) {
                 inputPassword.setError("Password must ben filled with text")
+                checkLogin = false
+            }else if (password != "admin") {
+                inputPassword.setError("Password false")
                 checkLogin = false
             }
 

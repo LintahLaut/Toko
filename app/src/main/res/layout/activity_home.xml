@@ -7,18 +7,28 @@
     tools:context=".HomeActivity">
 
     <FrameLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigation"
+        />
+
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/home_menu"
+            android:id="@+id/navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:foregroundGravity="bottom"
-            app:menu="@menu/home_menu" />
+            app:menu="@menu/home_menu"
 
-    </FrameLayout>
 
+            android:layout_alignParentBottom="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:scrollIndicators="left"/>/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

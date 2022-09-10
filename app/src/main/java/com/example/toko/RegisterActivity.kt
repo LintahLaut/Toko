@@ -1,5 +1,6 @@
 package com.example.toko
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -41,6 +42,11 @@ class RegisterActivity : AppCompatActivity() {
 
             // Memunculkan SnackBar
             Snackbar.make(mainLayout, "Text Cleared Success", Snackbar.LENGTH_LONG).show()
+        }
+
+        btnRegister.setOnClickListener {
+            val moveHome = Intent(this@RegisterActivity, MainActivity::class.java)
+            startActivity(moveHome)
         }
     }
 }
