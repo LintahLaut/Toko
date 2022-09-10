@@ -51,6 +51,7 @@ class RegisterActivity : AppCompatActivity() {
 
         btnRegister.setOnClickListener {
             var checkRegister = false
+            val mBundle = Bundle()
 
             val username: String = inputUsername.getEditText()?.getText().toString()
             val password: String = inputPassword.getEditText()?.getText().toString()
@@ -82,18 +83,18 @@ class RegisterActivity : AppCompatActivity() {
             else {
                 checkRegister = true
             }
-
             if (!checkRegister) return@setOnClickListener
-
-            val mBundle = Bundle()
 
             mBundle.putString("username",inputUsername.getEditText()?.getText().toString())
             mBundle.putString("password",inputPassword.getEditText()?.getText().toString())
+            mBundle.putString("password",inputEmail.getEditText()?.getText().toString())
+            mBundle.putString("password",inputTanggalLahir.getEditText()?.getText().toString())
+            mBundle.putString("password",inputNoTelepon.getEditText()?.getText().toString())
             intent.putExtra("register", mBundle)
+
 
             val moveHome = Intent(this@RegisterActivity, MainActivity::class.java)
             startActivity(moveHome)
-
         }
     }
 }

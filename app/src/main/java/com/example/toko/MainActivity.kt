@@ -24,16 +24,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // Mengambil data register ketika sudah register
-        var intent : Intent=intent
-        if (intent.hasExtra("register")){
-            getBundle()
-            setText()
-        }
-
-        // Ubah Title pada App Bar Aplikasi
         setTitle("USER LOGIN")
+
+        var intent : Intent = intent
 
         // Hubungkan variabel dengan view di layoutnya.
         inputUsername = findViewById(R.id.inputLayoutUsername)
@@ -42,9 +35,10 @@ class MainActivity : AppCompatActivity() {
         val btnRegister: Button = findViewById(R.id.btnRegister)
         val btnLogin: Button = findViewById(R.id.btnLogin)
 
-        btnRegister.setOnClickListener { // Mengkosongkan Input
-            val moveHome = Intent(this@MainActivity, RegisterActivity::class.java)
-            startActivity(moveHome)
+        // Mengambil data register ketika sudah register
+        if (intent.hasExtra("register")){
+            getBundle()
+            setText()
         }
 
         // Aksi pada btnLogin
@@ -53,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             val username: String = inputUsername.getEditText()?.getText().toString()
             val password: String = inputPassword.getEditText()?.getText().toString()
 
-            // Pengecekan apakah input username kosong
+            // EROR HANDLING
             if (username.isEmpty()) {
                 inputUsername.setError("Username must be filled with Text")
                 checkLogin = false
@@ -79,6 +73,12 @@ class MainActivity : AppCompatActivity() {
             val moveHome = Intent(this@MainActivity, HomeActivity::class.java)
             startActivity(moveHome)
         })
+
+        // Move ke Activity Register
+        btnRegister.setOnClickListener {
+            val moveHome = Intent(this@MainActivity, RegisterActivity::class.java)
+            startActivity(moveHome)
+        }
     }
 
     fun getBundle() {
@@ -89,6 +89,6 @@ class MainActivity : AppCompatActivity() {
 
     fun setText(){
         inputUsername = findViewById(R.id.inputLayoutUsername)
-        inputUsername.getEditText()?.setText("asiuduai")
+        inputUsername.getEditText()?.setText(newUsername)
     }
 }
