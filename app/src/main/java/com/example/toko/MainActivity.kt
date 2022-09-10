@@ -1,6 +1,8 @@
 package com.example.toko
 
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -15,9 +17,20 @@ class MainActivity : AppCompatActivity() {
     private lateinit var inputPassword: TextInputLayout
     private lateinit var mainLayout: ConstraintLayout
 
+    lateinit var  mBundle: Bundle
+    lateinit var newUsername : String
+    lateinit var newPassword : String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Mengambil data register ketika sudah register
+        var intent : Intent=intent
+        if (intent.hasExtra("register")){
+            getBundle()
+            setText()
+        }
 
         // Ubah Title pada App Bar Aplikasi
         setTitle("USER LOGIN")
@@ -47,9 +60,8 @@ class MainActivity : AppCompatActivity() {
             }else if (username != "admin") {
                 inputUsername.setError("Username false")
                 checkLogin = false
-            }else if (username == "admin") {
-                inputUsername.setTextColor(Color.parseColor("#FFFFFF"))
-                checkLogin = false
+            }else if (username == "admin" || username == newUsername) {
+                checkLogin = true
             }
 
             // Pengecekan apakah input password kosong
@@ -59,13 +71,24 @@ class MainActivity : AppCompatActivity() {
             }else if (password != "admin") {
                 inputPassword.setError("Password false")
                 checkLogin = false
+            }else if (password == "admin" || password == newPassword) {
+                checkLogin = true
             }
 
-            // Ganti Password dengan NPM kalian
-            if (username == "admin" && password == "admin") checkLogin = true
             if (!checkLogin) return@OnClickListener
             val moveHome = Intent(this@MainActivity, HomeActivity::class.java)
             startActivity(moveHome)
         })
+    }
+
+    fun getBundle() {
+        mBundle = intent.getBundleExtra("register")!!
+        newUsername = mBundle.getString("username")!!
+        newPassword = mBundle.getString("password")!!
+    }
+
+    fun setText(){
+        inputUsername = findViewById(R.id.inputLayoutUsername)
+        inputUsername.getEditText()?.setText("asiuduai")
     }
 }
