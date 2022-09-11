@@ -15,7 +15,7 @@ class FragmentHome : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        // Proses menghubungkan layout fragment_pegawai.xml dengan fragment ini
+        // Proses menghubungkan layout fragment_home.xml dengan fragment ini
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 

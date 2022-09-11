@@ -84,11 +84,13 @@ class MainActivity : AppCompatActivity() {
         mBundle = intent.getBundleExtra("register")!!
         newUsername = mBundle.getString("username")!!
         newPassword = mBundle.getString("password")!!
+        newEmail = mBundle.getString("email")!!
+        newTanggalLahir = mBundle.getString("tanggalLahir")!!
+        newNoTelepon = mBundle.getString("noTelepon")!!
     }
 
     fun setText() {
         inputUsername = findViewById(R.id.inputLayoutUsername)
         inputUsername.getEditText()?.setText(newUsername)
-        inputPassword.getEditText()?.setText(newPassword)
     }
 }

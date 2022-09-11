@@ -28,7 +28,6 @@ class FragmentBarang : Fragment() {
         // Menghubungkan rvBarang dengan recycler view yang ada pada layout
         val rvBarang: RecyclerView = view.findViewById(R.id.rv_barang)
 
-        // Set layout Manager dari recycler view
         rvBarang.layoutManager = layoutManager
 
         // tidak mengubah size recycler view jika terdapat item ditambahkan atau dikurangkan

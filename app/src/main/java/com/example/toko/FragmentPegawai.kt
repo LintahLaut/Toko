@@ -27,7 +27,6 @@ class FragmentPegawai : Fragment() {
         // Menghubungkan rvPegawai dengan recycler view yang ada pada layout
         val rvPegawai : RecyclerView = view.findViewById(R.id.rv_pegawai)
 
-        // Set layout Manager dari recycler view
         rvPegawai.layoutManager = layoutManager
 
         // tidak mengubah size recycler view jika terdapat item ditambahkan atau dikurangkan
