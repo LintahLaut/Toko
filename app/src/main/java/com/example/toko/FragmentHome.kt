@@ -24,14 +24,5 @@ class FragmentHome : Fragment() {
         val layoutManager = LinearLayoutManager(context)
         val adapter : RVHomeAdapter = RVHomeAdapter()
 
-        // Menghubungkan rvPegawai dengan recycler view yang ada pada layout
-        val rvHome : RecyclerView = view.findViewById(R.id.rv_home)
-
-        // Set layout Manager dari recycler view
-        rvHome.layoutManager = layoutManager
-
-        // tidak mengubah size recycler view jika terdapat item ditambahkan atau dikurangkan
-        rvHome.setHasFixedSize(true)
-
     }
 }
