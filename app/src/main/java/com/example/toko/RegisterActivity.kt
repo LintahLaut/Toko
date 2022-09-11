@@ -51,6 +51,7 @@ class RegisterActivity : AppCompatActivity() {
 
         btnRegister.setOnClickListener {
             var checkRegister = false
+            val moveHome = Intent(this, MainActivity::class.java)
 
             val username: String = inputUsername.getEditText()?.getText().toString()
             val password: String = inputPassword.getEditText()?.getText().toString()
@@ -59,30 +60,30 @@ class RegisterActivity : AppCompatActivity() {
             val noTelepon: String = inputNoTelepon.getEditText()?.getText().toString()
 
             // Pengecekan apakah input username kosong
-//            if (username.isEmpty()) {
-//                inputUsername.setError("Username must be filled with Text")
-//                checkRegister = false
-//            }
-//            if (password.isEmpty()) {
-//                inputPassword.setError("Password must be filled with Text")
-//                checkRegister = false
-//            }
-//            if (email.isEmpty()) {
-//                inputEmail.setError("Email must be filled with Text")
-//                checkRegister = false
-//            }
-//            if (tanggalLahir.isEmpty()) {
-//                inputTanggalLahir.setError("Tanggal Lahir must be filled with Text")
-//                checkRegister = false
-//            }
-//            if (noTelepon.isEmpty()) {
-//                inputNoTelepon.setError("No Telepon must be filled with Text")
-//                checkRegister = false
-//            }
-//            else {
-//                checkRegister = true
-//            }
-//            if (!checkRegister) return@setOnClickListener
+            if (username.isEmpty()) {
+                inputUsername.setError("Username must be filled with Text")
+                checkRegister = false
+            }
+            if (password.isEmpty()) {
+                inputPassword.setError("Password must be filled with Text")
+                checkRegister = false
+            }
+            if (email.isEmpty()) {
+                inputEmail.setError("Email must be filled with Text")
+                checkRegister = false
+            }
+            if (tanggalLahir.isEmpty()) {
+                inputTanggalLahir.setError("Tanggal Lahir must be filled with Text")
+                checkRegister = false
+            }
+            if (noTelepon.isEmpty()) {
+                inputNoTelepon.setError("No Telepon must be filled with Text")
+                checkRegister = false
+            }
+            else {
+                checkRegister = true
+            }
+            if (!checkRegister) return@setOnClickListener
 
             val mBundle = Bundle()
 
@@ -91,9 +92,8 @@ class RegisterActivity : AppCompatActivity() {
             mBundle.putString("email",inputEmail.getEditText()?.getText().toString())
             mBundle.putString("tanggalLahir",inputTanggalLahir.getEditText()?.getText().toString())
             mBundle.putString("noTelepon",inputNoTelepon.getEditText()?.getText().toString())
-            intent.putExtra("register",mBundle)
+            moveHome.putExtra("register",mBundle)
 
-            val moveHome = Intent(this@RegisterActivity, MainActivity::class.java)
             startActivity(moveHome)
         }
     }

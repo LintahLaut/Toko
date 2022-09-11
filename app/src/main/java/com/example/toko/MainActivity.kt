@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             if (username.isEmpty()) {
                 inputUsername.setError("Username must be filled with Text")
                 checkLogin = false
-            }else if (username != "admin") {
+            }else if (username != "admin" && username != newUsername) {
                 inputUsername.setError("Username false")
                 checkLogin = false
             }else if (username == "admin" || username == newUsername) {
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             if (password.isEmpty()) {
                 inputPassword.setError("Password must ben filled with text")
                 checkLogin = false
-            }else if (password != "admin") {
+            }else if (password != "admin" && password != newPassword) {
                 inputPassword.setError("Password false")
                 checkLogin = false
             }else if (password == "admin" || password == newPassword) {
@@ -89,5 +89,6 @@ class MainActivity : AppCompatActivity() {
     fun setText() {
         inputUsername = findViewById(R.id.inputLayoutUsername)
         inputUsername.getEditText()?.setText(newUsername)
+        inputPassword.getEditText()?.setText(newPassword)
     }
 }
