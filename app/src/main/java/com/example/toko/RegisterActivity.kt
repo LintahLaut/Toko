@@ -25,7 +25,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        // Menyembunyikan Action Bar
+        // Menyembunyikan Action Bar Diatas
         getSupportActionBar()?.hide()
 
         inputUsername = findViewById(R.id.inputRegisterUsername)
