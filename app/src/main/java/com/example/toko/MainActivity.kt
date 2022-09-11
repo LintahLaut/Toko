@@ -23,7 +23,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setTitle("USER LOGIN")
+
+        // Menyembunyikan Action Bar
+        getSupportActionBar()?.hide()
 
         // Hubungkan variabel dengan view di layoutnya
         inputUsername = findViewById(R.id.inputLayoutUsername)

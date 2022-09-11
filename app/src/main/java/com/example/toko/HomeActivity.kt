@@ -17,6 +17,10 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        // Menyembunyikan Action Bar
+        getSupportActionBar()?.hide()
+
         changeFragment(FragmentHome())
         navigation = findViewById(R.id.navigation) as BottomNavigationView
         navigation.setOnNavigationItemReselectedListener {

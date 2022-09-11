@@ -8,7 +8,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_pegawai"
         android:layout_width="match_parent"
-        android:layout_height="616dp"
+        android:layout_height="698dp"
         tools:listitem="@layout/rv_item_pegawai" />
 
 </FrameLayout>

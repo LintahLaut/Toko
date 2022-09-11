@@ -17,7 +17,7 @@ class RVBarangAdapter(private val data: Array<Barang>) : RecyclerView.Adapter<RV
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
         // Karena kita sudah mendefinisikan dan menghubungkan view kita,
-        // kita bisa memakai view tersebut dan melakukan set text pada view tersebut
+        // Kita bisa memakai view tersebut dan melakukan set text pada view tersebut
         val currentItem = data[position]
         holder.tvNamaBarang.text = currentItem.namaSepatu
         holder.tvDetailsBarang.text = "${currentItem.stok}"
