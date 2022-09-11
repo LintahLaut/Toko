@@ -17,7 +17,6 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var inputEmail: TextInputEditText
     private lateinit var inputTanggalLahir: TextInputEditText
     private lateinit var inputNoTelepon: TextInputEditText
-
     private lateinit var mainLayout: ConstraintLayout
     private lateinit var btnClear: Button
     private lateinit var btnRegister: Button
