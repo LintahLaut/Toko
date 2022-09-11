@@ -47,28 +47,48 @@ class MainActivity : AppCompatActivity() {
             var checkLogin = false
             val username: String = inputUsername.getEditText()?.getText().toString()
             val password: String = inputPassword.getEditText()?.getText().toString()
+            val username2 : String = username
 
             // EROR HANDLING
-            if (username.isEmpty()) {
-                inputUsername.setError("Username must be filled with Text")
-                checkLogin = false
-            }else if (username != "admin" && username != newUsername) {
-                inputUsername.setError("Username false")
-                checkLogin = false
-            }else if (username == "admin" || username == newUsername) {
-                checkLogin = true
+            if (intent.hasExtra("register")) {
+                if (username.isEmpty()) {
+                    inputUsername.setError("Username must be filled with Text")
+                    checkLogin = false
+                }
+                if (password.isEmpty()) {
+                    inputPassword.setError("Password must ben filled with text")
+                    checkLogin = false
+                }
+
+                if (username == "admin" && password == "admin") {
+                    checkLogin = true
+                }
+                if (username == newUsername && password == newPassword) {
+                    checkLogin = true
+                }
+
+            }else {
+                if (username.isEmpty()) {
+                    inputUsername.setError("Username must be filled with Text")
+                    checkLogin = false
+                }else if (username != "admin") {
+                    inputUsername.setError("Username false")
+                    checkLogin = false
+                }
+
+                if (password.isEmpty()) {
+                    inputPassword.setError("Password must ben filled with text")
+                    checkLogin = false
+                }else if (password != "admin") {
+                    inputPassword.setError("Password false")
+                    checkLogin = false
+                }
+
+                if (username == "admin" && password == "admin") {
+                    checkLogin = true
+                }
             }
 
-            // Pengecekan apakah input password kosong
-            if (password.isEmpty()) {
-                inputPassword.setError("Password must ben filled with text")
-                checkLogin = false
-            }else if (password != "admin" && password != newPassword) {
-                inputPassword.setError("Password false")
-                checkLogin = false
-            }else if (password == "admin" || password == newPassword) {
-                checkLogin = true
-            }
 
             if (!checkLogin) return@OnClickListener
             val moveHome = Intent(this@MainActivity, HomeActivity::class.java)
